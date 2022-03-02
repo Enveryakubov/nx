@@ -2,7 +2,7 @@
 const f1 = require("./templates/ofr-mf-boilerplate")
 const { generateTemplateFiles } = require('generate-template-files');
 
-
+console.log(f1)
 generateTemplateFiles([
     {
         option: 'Create microfrontend fragment',
