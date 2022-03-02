@@ -8,7 +8,7 @@ generateTemplateFiles([
         option: 'Create microfrontend fragment',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: './templates/ofr-mf-boilerplate',
+            folderPath: 'https://github.com/Enveryakubov/nx/tree/main/templates/ofr-mf-boilerplate',
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
