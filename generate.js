@@ -1,20 +1,22 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
+
+const { execSync } = require("child_process")
+
+const runCommand = command => {
+    try {
+        execSync(`${command}`, { stdio: "inherit" })
+    } catch (e) {
+        console.log(e)
+        return false
+    }
+    return true
+}
+
+const gitCloneTemplate = `git clone https://github.com/Enveryakubov/templates.git`
 
 const { generateTemplateFiles } = require('generate-template-files');
-const fse = require('fs-extra');
 
-const srcDir = `./templates`;
-const destDir = `./templates1`;
-
-// To copy a folder or file  
-fse.copySync(srcDir, destDir, { overwrite: true }, function (err) {
-    if (err) {
-        console.error(err);
-    } else {
-        console.log("success!");
-    }
-});
-
+runCommand(gitCloneTemplate)
 
 generateTemplateFiles([
     {
