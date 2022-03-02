@@ -1,14 +1,14 @@
 #! /usr/bin/env node
-const f1 = require("./templates/ofr-mf-boilerplate")
+
 const { generateTemplateFiles } = require('generate-template-files');
 
-console.log(f1)
+
 generateTemplateFiles([
     {
         option: 'Create microfrontend fragment',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: f1,
+            folderPath: "./templates/ofr-mf-boilerplate",
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
