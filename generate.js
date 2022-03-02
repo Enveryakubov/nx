@@ -2,6 +2,7 @@
 
 const { generateTemplateFiles } = require('generate-template-files');
 const { execSync } = require("child_process")
+const rimraf = require("rimraf");
 
 const runCommand = command => {
     try {
@@ -44,4 +45,4 @@ generateTemplateFiles([
             overwrite: true,
         },
     },
-]);
+]).then(() => rimraf.sync("./templates"));
