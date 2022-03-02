@@ -1,0 +1,141 @@
+.drawer {
+  &_toggle_button {
+    margin: 1.1rem 0 0 0.5rem;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    outline: none;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 1px solid cl(white);
+      transform: translateY(11px);
+      transition: transform 0.5s ease, border-color 0.5s ease 0.3s;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: cl(white);
+        transform: translateY(-11px);
+        animation-name: topLineBurger;
+        animation-duration: 0.6s;
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        animation-fill-mode: forwards;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: cl(white);
+        transform: translateY(11px);
+        animation-name: bottomLineBurger;
+        animation-duration: 0.6s;
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &_isOpen {
+      span {
+        border: transparent;
+        transition: border-color 0.3s ease;
+
+        &:before {
+          animation-name: topLineCross;
+          animation-duration: 0.6s;
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-fill-mode: forwards;
+        }
+
+        &:after {
+          animation-name: bottomLineCross;
+          animation-duration: 0.6s;
+          animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes topLineCross {
+  0% {
+    transform: translateY(-11px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+
+@keyframes bottomLineCross {
+  0% {
+    transform: translateY(11px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px) rotate(-45deg);
+  }
+}
+
+@keyframes topLineBurger {
+  0% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(-11px) rotate(0deg);
+  }
+}
+
+@keyframes bottomLineBurger {
+  0% {
+    transform: translateY(0px) rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(11px) rotate(0deg);
+  }
+}
+
+@keyframes drawerSlideLeftToRight {
+  0% {
+    transform: translateX(-15rem);
+  }
+  50% {
+    transform: translateX(-7.5rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}

@@ -1,0 +1,8 @@
+.app {
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  &__inner {
+    background-color: var(--main-bg-color);
+  }
+}

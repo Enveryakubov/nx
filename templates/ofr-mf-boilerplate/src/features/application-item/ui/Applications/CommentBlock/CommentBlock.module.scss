@@ -1,0 +1,73 @@
+.comments-block {
+  &__editor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &__editor {
+      width: 100%;
+      font-family: 'Roboto';
+
+      &::placeholder {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    height: 65vh;
+
+    padding-right: 0.3rem;
+
+    &__wrapper {
+      overflow: visible;
+
+      box-sizing: border-box;
+
+      & > div > div:first-of-type > div:first-of-type {
+        & > div[class$='author'] {
+          justify-content: flex-end;
+
+          & > span:first-of-type {
+            padding-right: 0;
+          }
+        }
+
+        & > div[class$='detail'] {
+          text-align: right;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      background: inherit;
+      width: 0.3rem;
+      height: 0.3rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 15px 0 0 15px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      border-radius: 15px 0 0 15px;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar {
+        width: 0.7rem;
+        height: 0.7rem;
+      }
+    }
+  }
+}

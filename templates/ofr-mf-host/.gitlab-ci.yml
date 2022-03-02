@@ -1,0 +1,4 @@
+include:
+  - project: 'nfo-projects/prototypes/frontend-modules2.0/prototypes/ofr_prototype/gitlab-ci-templates'
+    ref: main
+    file: 'microfrontend-template.yaml'
