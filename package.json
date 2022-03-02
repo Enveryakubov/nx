@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "generate.js",
+  "bin": "./generate.js",
   "dependencies": {
     "ansi-colors": "^4.1.1",
     "ansi-regex": "^5.0.1",

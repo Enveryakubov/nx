@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const { generateTemplateFiles } = require('generate-template-files');
 
 
