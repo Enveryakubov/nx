@@ -26,7 +26,7 @@ generateTemplateFiles([
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
-            path: './Fragment',
+            path: './__name__',
             pathAndFileNameDefaultCase: '(snakeCase)',
             overwrite: true,
         },
@@ -39,7 +39,7 @@ generateTemplateFiles([
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
-            path: './Host',
+            path: './__name__',
             pathAndFileNameDefaultCase: '(snakeCase)',
             overwrite: true,
         },
