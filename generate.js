@@ -1,6 +1,8 @@
 #! /usr/bin/env node
 
 const { generateTemplateFiles } = require('generate-template-files');
+const template = require("yentemplates")
+const path = require("path")
 
 
 generateTemplateFiles([
@@ -8,7 +10,7 @@ generateTemplateFiles([
         option: 'Create microfrontend fragment',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: "./templates/ofr-mf-boilerplate",
+            folderPath: `${template}`,
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
