@@ -22,7 +22,7 @@ generateTemplateFiles([
         option: 'Create microfrontend fragment',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: `./templates1/ofr-mf-boilerplate`,
+            folderPath: `./templates/ofr-mf-boilerplate`,
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
@@ -35,7 +35,7 @@ generateTemplateFiles([
         option: 'Create microfrontend host',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: './templates1/ofr-mf-host',
+            folderPath: './templates/ofr-mf-host',
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
