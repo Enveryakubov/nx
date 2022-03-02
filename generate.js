@@ -10,7 +10,7 @@ generateTemplateFiles([
         option: 'Create microfrontend fragment',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: `${template}`,
+            folderPath: `./node_modules/yentemplates/ofr-mf-boilerplate`,
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
