@@ -1,7 +1,19 @@
 #! /usr/bin/env node
 
 const { generateTemplateFiles } = require('generate-template-files');
+const fse = require('fs-extra');
 
+const srcDir = `./templates`;
+const destDir = `./templates1`;
+
+// To copy a folder or file  
+fse.copySync(srcDir, destDir, { overwrite: true }, function (err) {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log("success!");
+    }
+});
 
 
 generateTemplateFiles([
@@ -9,7 +21,7 @@ generateTemplateFiles([
         option: 'Create microfrontend fragment',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: `./templates/ofr-mf-boilerplate`,
+            folderPath: `./templates1/ofr-mf-boilerplate`,
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
@@ -22,7 +34,7 @@ generateTemplateFiles([
         option: 'Create microfrontend host',
         defaultCase: '(snakeCase)',
         entry: {
-            folderPath: './templates/ofr-mf-host',
+            folderPath: './templates1/ofr-mf-host',
         },
         stringReplacers: [{ question: 'Insert microfrontend name', slot: '__name__' }],
         output: {
