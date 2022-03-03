@@ -1,0 +1,34 @@
+@import '@ofr/ui-kit/dist/ofr-ui-kit.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  @if $colors {
+    @if $colors_theme {
+      @each $key, $value in $colors_theme {
+        --color-#{$key}: var(--color-#{$value});
+        --color-#{$key}--rgb: var(--color-#{$value}--rgb);
+      }
+    }
+
+    @each $key, $value in $colors {
+      --color-#{$key}: #{$value};
+      --color-#{$key}--rgb: #{HexToRGB($value)};
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+html,
+body,
+#root,
+.ant-layout {
+  width: 100%;
+  height: 100%;
+}

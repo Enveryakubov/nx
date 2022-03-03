@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding: 94px 0 0;
+}
+.title {
+  font-size: 36px;
+}
+.description {
+  width: 52%;
+  margin: auto;
+  font-size: 12px;
+}
+.step-container {
+  margin: 60px 0 88px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 80%;
+  }
+  .step-container {
+    width: 50%;
+    margin: 30px auto;
+  }
+}

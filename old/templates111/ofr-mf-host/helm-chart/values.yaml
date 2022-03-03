@@ -1,0 +1,7 @@
+ofr-microfrontend-chart:
+  appName: ofr-mf-host
+  namespace: dev
+  image:
+    name: nexus.do.neoflex.ru:8083/ofr-mf-host
+    tag: latest
+    pullPolicy: Always

@@ -1,0 +1,21 @@
+.app {
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  &__inner {
+    background-color: var(--main-bg-color);
+  }
+
+  &__footer {
+    position: absolute;
+    background: linear-gradient(180deg, rgb(34 60 80 / 23%), rgb(34 60 80 / 33%));
+    height: auto;
+    width: 100%;
+    padding: 0.5rem;
+    bottom: 0;
+    left: 0;
+    -webkit-box-shadow: 0px -15px 20px 4px rgba(34, 60, 80, 0.23);
+    -moz-box-shadow: 0px -15px 20px 4px rgba(34, 60, 80, 0.23);
+    box-shadow: 0px -15px 20px 4px rgba(34, 60, 80, 0.23);
+  }
+}
