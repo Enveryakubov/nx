@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ofr-mf-host
+  description: Контейнерное приложение для микрофронтэндов   
+  tags:
+    - typescript
+    - react
+  links:
+    - url: http://ofr-mf-host.apps.ofr.local
+      title: website
+      icon: dashboard
+spec:
+  type: service
+  lifecycle: production
+  owner: ofr-platform-team
+  system: ofr
